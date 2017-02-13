@@ -256,6 +256,13 @@ public enum NVActivityIndicatorType: Int {
      - returns: Instance of NVActivityIndicatorAnimationAudioEqualizer.
      */
     case audioEqualizer
+    /**
+     SpinningSquares.
+     
+     - returns: Instance of NVActivityIndicatorAnimationTriangleSkewSpin.
+     */
+    case spinningSquares
+
     
     static let allTypes = (blank.rawValue ... audioEqualizer.rawValue).map{ NVActivityIndicatorType(rawValue: $0)! }
     
@@ -325,6 +332,8 @@ public enum NVActivityIndicatorType: Int {
             return NVActivityIndicatorAnimationOrbit()
         case .audioEqualizer:
             return NVActivityIndicatorAnimationAudioEqualizer()
+        case .spinningSquares:
+            return NVActivityIndicatorAnimationSpinningSquares()
         }
     }
 }
